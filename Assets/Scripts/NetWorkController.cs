@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
 
-public class NewWorkController : NetworkManager {
+public class NetWorkController : NetworkManager {
     // <conn, charName> dict for the lobby
     // (people that are currently in the login handshake)
     Dictionary<NetworkConnection, string> lobby = new Dictionary<NetworkConnection, string>();
@@ -19,6 +19,7 @@ public class NewWorkController : NetworkManager {
     [Header("Database")] // dont show in inspector to avoid instantiation
     public int charNameMaxLength = 16;
     [SerializeField] float playerSaveInterval = 30f; // in seconds
+
 
     void Awake() {
         // handshake packet handlers
@@ -63,6 +64,8 @@ public class NewWorkController : NetworkManager {
     // start & stop ////////////////////////////////////////////////////////////
     public override void OnStartServer() {
         FindObjectOfType<UILogin>().Hide();
+
+        InvokeRepeating("SavePlayers", playerSaveInterval, playerSaveInterval);
 
         // call base function to guarantee proper functionality
         base.OnStartServer();

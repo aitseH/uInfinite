@@ -16,11 +16,11 @@ public class UILogin : MonoBehaviour {
     [SerializeField] Button btnQuit;
 
     // cache
-    NewWorkController manager;
+    NetWorkController manager;
 
     void Awake() {
         // NetworkManager.singleton is null for some reason
-        manager = FindObjectOfType<NewWorkController>();
+        manager = FindObjectOfType<NetWorkController>();
 
         // button onclicks
         btnQuit.onClick.SetListener(() => { Application.Quit(); });

@@ -29,8 +29,20 @@ public abstract class Entity : NetworkBehaviour {
     }
     public abstract int hpMax{ get; }
 
+    [Header("Mana")]
+    [SyncVar, SerializeField] protected bool mpRecovery = true; // can be disabled in combat etc.
+    [SyncVar, SerializeField] protected int mpRecoveryRate = 1; // per second
+    [SyncVar                ] int _mp = 1;
+    public int mp {
+        get { return Mathf.Min(_mp, mpMax); } // min in case hp>hpmax after buff ends etc.
+        set { _mp = Mathf.Clamp(value, 0, mpMax); }
+    }
+    public abstract int mpMax{ get; }
+
     [Header("Damage Popup")]
     [SerializeField] GameObject damagePopupPrefab;
+
+
 
     // other properties
     public abstract int damage { get; }

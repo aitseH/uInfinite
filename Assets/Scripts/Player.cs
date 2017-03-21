@@ -19,6 +19,13 @@ public class Player : Entity {
         }
     }
 
+    [SerializeField] int baseMpMax = 100;
+    public override int mpMax {
+        get {
+            return baseHpMax;
+        }
+    }
+
     [Header("Damage")]
     [SyncVar, SerializeField] int baseDamage = 1;
     public override int damage {

@@ -1,12 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NetWorkMessage.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Monster.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="88" Column="9" />
-      <File FileName="Assets/Scripts/Extensions.cs" Line="88" Column="5" />
-      <File FileName="Assets/Scripts/NetworkNavMeshAgent.cs" Line="67" Column="66" />
-      <File FileName="Assets/Scripts/Entity.cs" Line="9" Column="64" />
-      <File FileName="Assets/Scripts/NetWorkMessage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Monster.cs" Line="9" Column="3" />
+      <File FileName="Assets/Scripts/Entity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

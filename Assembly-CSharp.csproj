@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VIDEO;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;CROSS_PLATFORM_INPUT</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VIDEO;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;CROSS_PLATFORM_INPUT;ENABLE_MULTIPLAYER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -52,6 +52,10 @@
      <Compile Include="Assets\Scripts\Extensions.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\ItemTemplate.cs" />
+     <Compile Include="Assets\Scripts\Monster.cs" />
+     <Compile Include="Assets\Scripts\MonsterTemplate.cs" />
+     <Compile Include="Assets\Scripts\NPC.cs" />
+     <Compile Include="Assets\Scripts\NPCTemplate.cs" />
      <Compile Include="Assets\Scripts\NavmeshPathGizmo.cs" />
      <Compile Include="Assets\Scripts\NetWorkController.cs" />
      <Compile Include="Assets\Scripts\NetWorkMessage.cs" />
@@ -59,11 +63,128 @@
      <Compile Include="Assets\Scripts\NetworkNavMeshAgent.cs" />
      <Compile Include="Assets\Scripts\NetworkProximityCheckerCustom.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\PlayerChat.cs" />
+     <Compile Include="Assets\Scripts\Quest.cs" />
+     <Compile Include="Assets\Scripts\QuestTemplate.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
+     <Compile Include="Assets\Scripts\_UI\UIChat.cs" />
      <Compile Include="Assets\Scripts\_UI\UILogin.cs" />
      <Compile Include="Assets\Scripts\_UI\UIPopup.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Adventure\Scripts\AudioEvent.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Adventure\Scripts\DoorOpenInteractable.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Adventure\Scripts\DoorTrigger.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Adventure\Scripts\LightTrigger.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Adventure\Water\Sources\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Adventure\Water\Sources\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Adventure\Water\Sources\Scripts\WaterBase.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Adventure\Water\Sources\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Clean Scene\Scripts\CleanSpawnSelection.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Clean Scene\Scripts\DemoManager.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Network\Scripts\DemoNetworkManager.cs" />
+     <Compile Include="Assets\Third Person Controller\Demos\Network\Scripts\ObjectSpawner.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Utility\CharacterBuilder.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\AI\SimpleTurret.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Camera\CameraController.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Camera\CameraHandler.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Camera\CameraMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Balance.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Climb.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Cover.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\DamageVisualization.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Fall.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Generic.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Hang.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\HeightChange.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Interact.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Jump.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\LedgeStrafe.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\PickupItem.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Push.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\QuickMovement.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\RestrictRotation.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Ride.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Roll.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\ShortClimb.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\SpeedChange.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Swim.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\Abilities\Vault.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\AnimatorMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\CharacterFootTrigger.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\CharacterFootsteps.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\CharacterHealth.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\CharacterIK.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\CharacterRagdoll.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\CharacterRespawner.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\ControllerHandler.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\ItemColliderPositioner.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\ItemHandler.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\ItemPlacement.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\NavMeshAgentBridge.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\NetworkMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\PointClickControllerHandler.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Character\RigidbodyCharacterController.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Game\DecalManager.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Game\DecalRemover.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Game\LayerManager.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Game\NetworkEventManager.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Game\ObjectManager.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Game\ObjectPool.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Game\Scheduler.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Game\SpawnSelection.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Input\UnityInput.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Input\UnityVirtualButton.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Input\UnityVirtualButtonManager.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Inventory\ConsumableItemType.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Inventory\DualWieldItemType.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Inventory\Inventory.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Inventory\InventoryHandler.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Inventory\PrimaryItemType.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Inventory\SecondaryItemType.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\Attachments\LaserSight.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\Extensions\ItemExtension.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\Extensions\MeleeWeaponExtension.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\Extensions\ShootableWeaponExtension.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\Extensions\WeaponExtension.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\MagicItem.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\MeleeWeapon.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\ShootableWeapon.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\StaticItem.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Items\ThrowableItem.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\AnimatedInteractable.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\ClimbableObject.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\Explosion.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\Grenade.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\HealthPickup.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\ItemPickup.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\MovingPlatform.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\MuzzleFlash.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\Projectile.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\PushableObject.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\RideableObject.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\Shell.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\Tracer.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Objects\Water.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Traits\Health.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Traits\Interactable.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Traits\ParticleRemover.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Traits\Respawner.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\UI\AbilityIndicatorMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\UI\CrosshairsMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\UI\HealthMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\UI\HitIndicatorMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\UI\ImageFader.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\UI\ItemMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\UI\ItemWheelMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\UI\ItemWheelSliceMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\UI\SniperScopeMonitor.cs" />
+     <Compile Include="Assets\Third Person Controller\Scripts\Wrappers\Utility\EventHandler.cs" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
+     <None Include="Assets\Third Person Controller\Demos\Adventure\Shaders\WaterSplash.shader" />
+     <None Include="Assets\Third Person Controller\Demos\Third Person Shooter\Shaders\LaserSight.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Third Person Controller\Demos\Adventure\Water\Sources\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Third Person Controller\Demos\Adventure\Shaders\TerrainSurface.shader" />
+     <None Include="Assets\Third Person Controller\Demos\Adventure\Water\Sources\Shaders\FX-Water4.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -81,6 +202,9 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="ThirdPersonControllerRuntime">
+ <HintPath>/Users/vai/fun/Unity/uInfinite/Assets/Third Person Controller/Scripts/ThirdPersonControllerRuntime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

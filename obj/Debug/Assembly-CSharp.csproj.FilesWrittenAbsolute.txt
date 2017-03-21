@@ -63,3 +63,4 @@
 /Users/vai/fun/Unity/uInfinite/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/vai/fun/Unity/uInfinite/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
 /Users/vai/fun/Unity/uInfinite/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/vai/fun/Unity/uInfinite/Temp/bin/Debug/ThirdPersonControllerRuntime.dll

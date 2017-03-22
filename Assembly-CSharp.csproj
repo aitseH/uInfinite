@@ -62,10 +62,15 @@
      <Compile Include="Assets\Scripts\NetworkName.cs" />
      <Compile Include="Assets\Scripts\NetworkNavMeshAgent.cs" />
      <Compile Include="Assets\Scripts\NetworkProximityCheckerCustom.cs" />
+     <Compile Include="Assets\Scripts\NetworkTime.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerChat.cs" />
+     <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Quest.cs" />
      <Compile Include="Assets\Scripts\QuestTemplate.cs" />
+     <Compile Include="Assets\Scripts\Skill.cs" />
+     <Compile Include="Assets\Scripts\SkillTemplate.cs" />
+     <Compile Include="Assets\Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
      <Compile Include="Assets\Scripts\_UI\UIChat.cs" />
      <Compile Include="Assets\Scripts\_UI\UILogin.cs" />

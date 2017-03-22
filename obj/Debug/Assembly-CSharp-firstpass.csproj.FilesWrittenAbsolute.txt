@@ -19,3 +19,4 @@
 /Users/vai/fun/Unity/uInfinite/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/vai/fun/Unity/uInfinite/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/vai/fun/Unity/uInfinite/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/vai/fun/Unity/uInfinite/Temp/bin/Debug/ThirdPersonControllerRuntime.dll

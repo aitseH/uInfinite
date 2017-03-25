@@ -189,7 +189,7 @@ public abstract class Entity : NetworkBehaviour {
 
             // show damage popup in observers via ClientRpc
             // showing them above their head looks best, and we don't have to
-            // use a custom shader to draw world space UI in front of the entity
+            // use a custom shader to draw World space UI in front of the entity
             // note: we send the RPC to ourselves because whatever we killed
             //       might disappear before the rpc reaches it
             var bounds = e.GetComponentInChildren<Collider>().bounds;

@@ -24,8 +24,7 @@ namespace Uinfinite.Editor
 
         private InputManager m_Input;
 
-
-        [MenuItem("Tools/Ultimate Survival/Input Manager", false)]
+        [MenuItem("Tools/Uinfinite/Input Manager", false)]
         public static void OpenInputManager()
         {
             EditorWindow window = GetWindow<InputManagerWindow>(true,"Input Manager");

@@ -101,7 +101,7 @@ public class NetWorkController : NetworkManager {
     }
 
     bool CharNameLoggedIn(string charName) {
-        // in lobby or in world?
+        // in lobby or in World?
         return lobby.ContainsValue(charName) ||
             NetworkServer.objects.Any(e => e.Value.GetComponent<Player>() &&
                 e.Value.GetComponent<Player>().name == charName);
@@ -123,7 +123,7 @@ public class NetWorkController : NetworkManager {
         if (msg.id.Length <= charNameMaxLength) {
             // validate charname
             if (IsValidCharName(msg.id)) {
-                // not in lobby and not in world yet?
+                // not in lobby and not in World yet?
                 if (!CharNameLoggedIn(msg.id)) {
                     print("login successful: " + msg.id);
 

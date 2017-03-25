@@ -2,9 +2,9 @@
 <character>
   <position>
     <Vector3 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <x>24.60762</x>
-      <y>0.6666565</y>
-      <z>11.4105892</z>
+      <x>0.198267072</x>
+      <y>0.6666508</y>
+      <z>30.1912174</z>
     </Vector3>
   </position>
   <hp>100</hp>

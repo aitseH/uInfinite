@@ -26,12 +26,27 @@ namespace Uinfinite.ModSystem
             return System.IO.Path.Combine(System.IO.Path.Combine(Application.streamingAssetsPath, "Data"), "Mods");
         }
 
+
         public void LoadShareFiles(){
 
         }
 
         public void LoadMainSceneFiles(){
             
+        }
+
+
+        public void LoadFunctionsInFile(FileInfo file, string functionsName)
+        {
+            LoadTextFile(
+                file.DirectoryName,
+                file.Name,
+                (filePath) =>
+                {
+                    StreamReader reader = new StreamReader(file.OpenRead());
+                    string text = reader.ReadToEnd();
+                    FunctionsManager.Get(functionsName).LoadScript(text, functionsName, file.Extension == ".lua" ? Functions.Type.Lua : Functions.Type.CSharp);
+                });
         }
 
         private void LoadFunctions(string fileName, string functionsName)
@@ -66,6 +81,36 @@ namespace Uinfinite.ModSystem
                 filePath = Path.Combine(mod.FullName, fileName);
                 if(File.Exists(filePath)){
                     readText(filePath);
+                }
+            }
+        }
+
+        private void LoadPrototypes(string fileName, Action<string> prototypesLoader)
+        {
+            LoadTextFile(
+                "Data",
+                fileName,
+                (filePath) =>
+                {
+                    string text = File.ReadAllText(filePath);
+                    prototypesLoader(text);
+                });
+        }
+
+        private void LoadDirectoryAssets(string directoryName, Action<string> readDirectory)
+        {
+            string directoryPath = Path.Combine(Application.streamingAssetsPath, directoryName);
+            if (Directory.Exists(directoryPath))
+            {
+                readDirectory(directoryPath);
+            }
+
+            foreach (DirectoryInfo mod in mods)
+            {
+                directoryPath = Path.Combine(mod.FullName, directoryName);
+                if (Directory.Exists(directoryPath))
+                {
+                    readDirectory(directoryPath);
                 }
             }
         }
